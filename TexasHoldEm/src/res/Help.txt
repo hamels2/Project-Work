@@ -1,0 +1,13 @@
+HELP/TERMINOLOGY:
+Check(Call): Match the previous bet
+Bet/Raise: Money wagered during the play of a hand
+Fold: Throw away your hand and show disinterest in current pot
+Blind: Forced bet (small blind is smaller of the two forced bets)
+Community cards: Shared cards placed faced up at the center of the table
+
+OBJECTIVE: Put pressure on your opponent and build pots
+
+STRATEGY: 
+Judge your opponent.
+Play aggressively aggainst weaker opponents.
+Play defensively against stronger and more aggressive opponents.

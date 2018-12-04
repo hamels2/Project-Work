@@ -1,0 +1,39 @@
+RULES:
+
+Blinds: Two players(small and big blind) start every hand with 1000 chips. 
+	Small blind contributes one chip to the pot and the big blind contributes two chips to the pot before the cards are dealt.
+
+Pre-Flop: Both players receive two faced-down cards from the deck.
+	  The small blind can call,raise or fold.
+	  If the small blind calls or raise, the big blind can take action.
+	  Game proceeds alternatively in this manner till a player folds or calls.
+	  Size of a raise must be at least as large as any raise made within the current round.
+
+Flop: Three community cards are dealt.
+      Second betting round with the big blind going first.
+      The first bet must be at least two chips.
+
+Turn: One community card is dealt. 
+      Players participate in a betting round as on the flop
+
+River: A final community card is dealt. 
+       Players again participate in a betting round as on the flop and turn.
+
+Showdown: After the river round, both players form the best five-card poker hand using two faced-down cards and and the five community cards.
+	  The player with the best hand wins the chips in the pot.
+          Players split the pot in the case of two equally ranked hands.
+
+
+
+
+Hand Ranks(In order from highest to lowest):
+
+Straight Flush: Five cards in numerical order, all of identical suits.
+Quad: Four cards of the same rank, and one side card.
+Full House: Three cards of the same rank, and two cards of a different, matching rank.
+Flush: Five cards of the same suit.
+Straight: Five cards in sequence.
+Triple: Three cards of the same rank, and two unrelated side cards.
+Two pair: Two cards of a matching rank, another two cards of a different matching rank, and one side card.
+One pair: Two cards of a matching rank, and three unrelated side cards.
+High Card: Any hand that does not qualify under a category listed above.
