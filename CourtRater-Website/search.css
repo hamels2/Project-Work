@@ -1,0 +1,126 @@
+html, body {
+    margin: 0;
+    height: 100%;  /*body height fills page*/
+}
+
+div{/*div takes up 90$ of height of screen*/
+  height: 90%;
+}
+
+
+body{ /*setting style of body*/
+  color: #FFF;
+  margin: 0;
+  font-family: Arial;
+  background-color: #666666;
+}
+
+header nav { /*navigation menu has different background */
+  background:#FA8320;
+  color: white;
+  font-family: Arial;
+}
+
+h1{
+  text-align: center;
+  color: #FA8320;
+}
+
+header nav a:link, a:visited{
+/*changing the hyperlinks for nav menu to look like buttons*/
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  font-weight: bold;
+  font-family: Arial;
+  text-decoration: none;
+  display: inline-block;
+
+}
+
+header nav a:hover, a:active { /*background of nav buttons changes texture when hovered/clicked*/
+    background-image: url(texture.jpg);
+}
+
+/*centering all items in div*/
+form{
+  text-align: center;
+}
+
+p{ /*paragraph styling*/
+  color:#FA8320;
+  text-align: center;
+  padding: none;
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+input{
+  text-align: center;
+}
+
+input[type="text"]{ /*rounding the edges of textbox*/
+  border:2px solid #000;
+	border-radius:10px;
+	height: 22px;
+	width: 230px;
+  display: inline-block;
+  text-align: center;
+  margin: auto;
+
+
+}
+
+
+input[type="text"]:focus{
+  outline: none;
+}
+
+
+input[type="submit"]{  /*no outline when clicked*/
+  margin-top: 20px;
+  background-color:#FA8320;
+  box-shadow: none;
+  border-radius: 0;
+  border: 0;
+  color: #FFF;
+  font-weight: bold;
+  width: 75px;
+  height: 25px;
+  text-align: center;
+
+}
+
+
+footer{
+  padding-top: 50px;
+
+}
+footer a{
+  color: #FA8320;;
+}
+footer p{
+  font-weight:normal;
+  color: #FFF;
+}
+
+@media only screen and (max-width: 376px) { /*when screen is smaller make nav buttons smaller*/
+  header nav a:link, a:visited{
+
+
+    color: white;
+    padding: 14px 6px;
+    text-align: center;
+    font-weight: bold;
+    font-family: Arial;
+    text-decoration: none;
+    display: inline-block;
+
+  }
+  header nav {
+    background:#FA8320;
+    color: white;
+    font-family: Arial;
+    text-align: center;
+
+  }
+}

@@ -1,0 +1,124 @@
+html, body {
+    margin: 0;
+    height: 100%; /*body height fills page*/
+}
+
+body{  /*setting style of body*/
+  color: #FFF;
+  margin: 0;
+  font-family: Arial;
+  background-color: #666666;
+}
+
+
+header nav { /*navigation menu has different background */
+  background:#FA8320;
+  color: white;
+  font-family: Arial;
+
+}
+
+header nav a:link, a:visited{
+/*changing the hyperlinks for nav menu to look like buttons*/
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  font-weight: bold;
+  font-family: Arial;
+  text-decoration: none;
+  display: inline-block;
+
+}
+
+header nav a:hover, a:active { /*background of nav buttons changes texture when hovered/clicked*/
+    background-image: url(texture.jpg);
+}
+
+div{ /*alignin div*/
+  width: 100%;
+  clear: both;
+  color: #FA8320;
+  font-family: Arial;
+  font-weight: bold;
+  height: 90%;
+
+
+}
+/*aligning all elements in div*/
+form{
+  text-align: center;
+}
+
+h1,h2{
+  text-align: center;
+}
+p{
+  text-align: center;
+  padding: none;
+  margin-bottom: 0px;
+}
+
+input{
+  text-align: center;
+}
+
+
+input[type="text"]{ /*rounding the edges of textbox*/
+  border:2px solid #000;
+	border-radius:10px;
+	height: 22px;
+	width: 230px;
+  display: inline-block;
+  text-align: center;
+  margin: auto;
+
+
+}
+input[type="password"]{ /*rounding the edges of password*/
+  border:2px solid #000;
+  border-radius:10px;
+  height: 22px;
+  width: 230px;
+  display: inline-block;
+  text-align: center;
+  margin: auto;
+}
+input[type="password"]{ /*no outline when clicked*/
+  outline: none;
+}
+input[type="text"]:focus{ /*no outline when clicked*/
+  outline: none;
+}
+
+textarea{  /*rounding the edges of textarea*/
+  border:2px solid #000;
+	border-radius:10px;
+	height: 60px;
+	width: 230px;
+  display: inline-block;
+  margin: auto;
+}
+textarea:focus{
+  outline: none;
+}
+
+input[type="submit"]{  /*changing the style of the submit button*/
+  margin-top: 20px;
+  background-color:#FA8320;
+  box-shadow: none;
+  border-radius: 0;
+  border: 0;
+  color: #FFF;
+  font-weight: bold;
+  width: 75px;
+  height: 25px;
+  text-align: center;
+
+}
+
+footer a{
+  color: #FA8320;
+}
+footer p{
+  color: #FFF
+}

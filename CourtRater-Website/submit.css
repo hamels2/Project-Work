@@ -1,0 +1,282 @@
+
+html, body {
+    margin: 0;
+    height: 100%; /*body height fills page*/
+}
+
+body{  /*setting style of body*/
+  color: #FFF;
+  margin: 0;
+  font-family: Arial;
+  background-color: #666666;
+}
+
+
+header nav {  /*navigation menu has different background */
+  background:#FA8320;
+  color: white;
+  font-family: Arial;
+
+}
+
+header nav a:link, a:visited{
+/*changing the hyperlinks for nav menu to look like buttons*/
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  font-weight: bold;
+  font-family: Arial;
+  text-decoration: none;
+  display: inline-block;
+
+}
+
+header nav a:hover, a:active { /*background of nav buttons changes texture when hovered/clicked*/
+    background-image: url(texture.jpg);
+}
+
+div{  /*div uses different color text, width fills page*/
+  width: 100%;
+  clear: both;
+  color: #FA8320;
+  font-family: Arial;
+  font-weight: bold;
+  height: 90%;
+}
+/*centering all items in div*/
+form{
+  text-align: center;
+}
+input[type="file"]{
+  text-align: center;
+  margin-left: 80px;
+}
+h1,h2{
+  text-align: center;
+}
+p{
+  text-align: center;
+  padding: none;
+  margin-bottom: 0px;
+}
+
+input{
+  text-align: center;
+}
+
+img{ /*making the image of the balls small*/
+  height: 2.5%;
+  width: 2.5%;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+input[type="text"]{  /*rounding the edges of textbox*/
+  border:2px solid #000;
+	border-radius:10px;
+	height: 22px;
+	width: 230px;
+  display: inline-block;
+  text-align: center;
+  margin: auto;
+
+
+}
+
+.col{ /*aligning nested div*/
+  text-align: center;
+}
+button{ /*putting the images of the balls into the button*/
+  background: url(ball.png);
+  box-shadow: none;
+  border-radius: 0;
+  border: 0;
+  font-size: 0;
+  margin-left: 15px;
+
+}
+/*changing the background size so that more balls appear in the button*/
+.one{
+  width: 15px;
+  height:15px;
+  background-size: 100% 100%;
+}
+.two{
+  width: 30px;
+  height:15px;
+  background-size: 50% 100%;
+}
+.three{
+  width: 45px;
+  height:15px;
+  background-size: 33.33% 100%;
+}
+.four{
+  width: 60px;
+  height:15px;
+  background-size: 25% 100%;
+}
+.five{
+  width: 75px;
+  height:15px;
+  background-size: 20% 100%;
+}
+/*making the balls change when hovered
+also have to make the background size the same as when not hovered*/
+.one:hover,.one:active{
+  background: url(aba.png);
+  background-size: 100% 100%;
+  box-shadow: none;
+  border-radius: 0;
+  border: 0;
+  font-size: 0;
+}
+.two:hover,.two:active{
+  background: url(aba.png);
+  background-size: 50% 100%;
+  box-shadow: none;
+  border-radius: 0;
+  border: 0;
+  font-size: 0;
+}
+.three:hover,.three:active{
+  background: url(aba.png);
+  background-size: 33.33% 100%;
+  box-shadow: none;
+  border-radius: 0;
+  border: 0;
+  font-size: 0;
+}
+.four:hover,.four:active{
+  background: url(aba.png);
+  background-size: 25% 100%;
+  box-shadow: none;
+  border-radius: 0;
+  border: 0;
+  font-size: 0;
+}
+
+.five:hover,.five:active{
+  background: url(aba.png);
+  background-size: 20% 100%;
+  box-shadow: none;
+  border-radius: 0;
+  border: 0;
+  font-size: 0;
+}
+
+/*same thing as before but now for when it is clicked*/
+.one:focus{
+  background: url(aba.png);
+  background-size: 100% 100%;
+  box-shadow: none;
+  border-radius: 0;
+  border: 0;
+  font-size: 0;
+  outline: none;
+}
+.two:focus{
+  background: url(aba.png);
+  background-size: 50% 100%;
+  box-shadow: none;
+  border-radius: 0;
+  border: 0;
+  font-size: 0;
+  outline: none;
+}
+.three:focus{
+  background: url(aba.png);
+  background-size: 33.333% 100%;
+  box-shadow: none;
+  border-radius: 0;
+  border: 0;
+  font-size: 0;
+  outline: none;
+}
+.four:focus{
+  background: url(aba.png);
+  background-size: 25% 100%;
+  box-shadow: none;
+  border-radius: 0;
+  border: 0;
+  font-size: 0;
+  outline: none;
+}
+.five:focus{
+  background: url(aba.png);
+  background-size: 20% 100%;
+  box-shadow: none;
+  border-radius: 0;
+  border: 0;
+  font-size: 0;
+  outline: none;
+}
+input[type="text"]:focus{ /*no outline when textboxes clicked*/
+  outline: none;
+}
+textarea{ /*rounding out text area*/
+  border:2px solid #000;
+	border-radius:10px;
+	height: 60px;
+	width: 230px;
+  display: inline-block;
+  margin: auto;
+}
+textarea:focus{ /*no outline when textarea clicked*/
+  outline: none;
+}
+
+
+
+
+input[type="submit"]{ /*changing the style of the submit button*/
+  margin-top: 20px;
+  background-color:#FA8320;
+  box-shadow: none;
+  border-radius: 0;
+  border: 0;
+  color: #FFF;
+  font-weight: bold;
+  width: 75px;
+  height: 25px;
+  text-align: center;
+
+}
+
+footer a{
+  color: #FA8320;;
+}
+footer p{
+  color: #FFF
+}
+
+
+footer{
+  font-weight: normal;
+}
+
+
+@media only screen and (max-width: 376px) { /*when screen is smaller make nav buttons smaller*/
+  header nav a:link, a:visited{
+
+
+    color: white;
+    padding: 14px 6px;
+    text-align: center;
+    font-weight: bold;
+    font-family: Arial;
+    text-decoration: none;
+    display: inline-block;
+
+  }
+  header nav {
+    background:#FA8320;
+    color: white;
+    font-family: Arial;
+    text-align: center;
+
+  }
+
+}
