@@ -1,0 +1,124 @@
+\documentclass[11pt]{article} 
+\usepackage{geometry}
+\geometry{letterpaper}
+
+\usepackage{graphicx}   
+\usepackage{amssymb}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+\usepackage[english]{babel}
+
+\begin{document}
+
+\begin{titlepage}
+	\newcommand{\HRule}{\rule{\linewidth}{0.2mm}}
+	\begin{center}
+	\textsc{\LARGE McMaster University}\\[1.5cm]
+	
+	\textsc{\Large SmartServe}\\[0.5cm]
+	\textsc{\large Software \& Mechatronics Capstone}\\[0.5cm] 
+
+	\HRule\\[0.4cm]
+		{\huge\bfseries Project Goals}\\[0.4cm]
+	\HRule\\[0.4cm]
+	
+	\begin{minipage}[t][][t]{0.5\textwidth}
+		\begin{flushleft} \large
+			\emph{Authors:}\\
+			Christopher McDonald - \textit{001312456} \\
+			Harit Patel - \textit{001317372}\\
+			Janak Patel - \textit{001307060} \\
+			Jared Rayner - \textit{001311702}\\
+			Nisarg Patel - \textit{001322805} \\
+			Sam Hamel - \textit{001321692} \\
+			Sharon Platkin - \textit{001316625} \\
+		\end{flushleft}
+	\end{minipage}
+	~
+	\begin{minipage}[t][][t]{0.4\textwidth}
+		\begin{flushright} \large
+			\emph{Professor:} \\
+			Dr. Alan Wassyng \\[0.4cm]
+			\emph{Teaching Assistants:} \\
+			Bennett Mackenzie \\ 
+			Nicholas Annable \\ 
+			Stephen Wynn-Williams \\ 
+			Viktor Smirnov
+		\end{flushright}
+	\end{minipage}\\[2cm]
+	
+	\includegraphics[width=0.3\textwidth]{logo.png} \\
+	{\large Last compiled on \today}
+	\end{center}
+
+\end{titlepage}
+
+\tableofcontents
+\listoffigures
+
+\vfill
+\begin{figure}[htbp]
+   \centering
+   \noindent\begin{tabularx}{\textwidth}{| >{\centering\arraybackslash}m{0.2\textwidth} | >{\centering\arraybackslash}m{0.2\textwidth} | >{\centering\arraybackslash}m{0.2\textwidth} | >{\centering\arraybackslash}m{0.285\textwidth} |}
+   \hline 
+   \textbf{Date} & \textbf{Revision} & \textbf{Comments} & \textbf{Author(s)} \\
+   \hline 
+   10/05/17 & 0 & First revision of document completed & Christopher McDonald \& Sharon Platkin \\ \hline
+   10/06/17 & 1 & Second revision to add more sections and text & Christopher McDonald \& Nisarg Patel \& Harit Patel \\ \hline
+   10/06/17 & 2 & Third revision to strengthen the context, proof read and refine the context & Christopher McDonald \& Nisarg Patel \\ \hline
+   10/06/17 & 3 & Fourth revision of document to set realistic goals, remove extra goals to ensure the total number of goals is less then 15 & Christopher McDonald \& Nisarg Patel \& Janak Patel \& Jared Rayner \& Sam Hamel \\
+   \hline
+   \end{tabularx}
+   \caption{Revision History}
+\end{figure}
+
+\newpage
+\section{Team Vision}
+The SmartServe team envisions to provide Table Tennis enthusiasts with an effective training solution which enables any player to improve their game with the help of modern technology and data analytics.
+\section{Project Overview}
+When a player wants to improve their table tennis game, a typical solution is to hire a coach. However, this does not come without its challenges. These include scheduling, focusing on particular shots and receiving in-depth statistical feedback. Our solution to solve the above problem will consist of a shooting mechanism, a way to identify successful returns and a system to recommend different shots. Throughout the training session, the system will provide the user with feedback on the quality of their game. The system will consist of a electromechanical system to shoot the ball and a computer vision system to track the ball's location during flight. A server will also be added to store data, provide diagnostics and recommend shots given the user's past performance.
+\section{Success Criteria}
+To judge how well the system meets the problem described above, several aspects of the system will need to be measured. The first major part is the accuracy and precision of the shooting mechanism with respect to how well it shoots the ball. The second will be how many degrees of freedom can be applied to a shot to vary its characteristics. Lastly, including features in order to better solve the problem in areas like usability, performance and quality. However, for the project to be deemed successful in solving the problem, all of the low-level goals need to be satisfied. The mid and high-level goals will be prioritized last after the low-level have all been achieved.
+\section{Goals}
+\subsection{Low-Level Goals}
+The following items encompass the low-level goals of the system:
+\begin{itemize}
+\item The system can detect valid returns from the user
+\item The system can hit 9 zones on the table, corresponding to a 3x3 grid
+\item The system implements reinforcement learning algorithms
+\item The system helps improve the user's ability to play table tennis % made change to sound more like a goal
+\item The system is implemented with one camera
+\item The shooting mechanism can pan
+\item The shooting mechanism can shoot with variable speeds
+\end{itemize}
+The above list encompasses what we determine as a successful product. The system would be 
+\subsection{Mid-Level Goals}
+The following items encompass the mid-level goals of the system:
+\begin{itemize}
+\item The system can hit 16 zones on the table, corresponding to a 4x4 grid
+\item The system has real-time performance updates
+\item The system implements `single-shot' and random shooting modes
+\item The system can apply various spin directions
+\item The system can support multiple user profiles
+\item The system is implemented with a stereoscopic camera
+\end{itemize}
+\subsection{High-Level Goals}
+The following items encompass the high-level goals of the system:
+\begin{itemize}
+\item The system can hit 36 zones on the table, corresponding to a 6x6 grid
+\item The system can track the ball throughout the complete path travelled across the table
+\item The system is implemented with two synchronized cameras
+\item The system can shoot at variable pitch
+\end{itemize}
+
+
+\end{document}  

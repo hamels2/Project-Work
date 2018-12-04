@@ -1,0 +1,30 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper}
+
+\usepackage{graphicx}   
+\usepackage{amssymb}
+
+\title{Project Choice \& Justification \\ Tentative Project Name: SmartServe}
+\author{
+Christopher McDonald \\ 001312456 \\ \and
+Harit Patel \\ 001317372 \\ \and
+Janak Patel \\ 001307060 \\ \and
+Jared Rayner \\ 001311702 \\ \and
+Nisarg Patel \\ 001322805 \\ \and
+Sam Hamel \\ 001321692 \\ \and
+Sharon Platkin \\ 001316625 \\
+}
+\date{Last compiled on \today}
+
+\begin{document}
+\maketitle
+\section*{Project Choice}
+\subsection*{Problem}
+When a player wants to improve their table tennis game, the typical solutions could be to hire a coach or to try and play more competitive games. However, this does not come without its challenges. If they do play more competitive games, this lacks any tools or feedback to improve their abilities. For example, focusing on returning on particular shots is hard with a human opponent with different motives. Moreover, finding an opponent who shares your schedule and matches your skill level can be difficult which can lead to a demotivating or boring game. The alternative, hiring a coach is not a perfect solution either. For example, finding one and scheduling them can be difficult depending on the demand of the coach. A coach cannot consistently hit specific locations and speeds while also adapting to how well the player is doing. Lastly, a coach would have a hard time giving analytics to the player in real time during a training session or give in-depth statistical information regarding the player's historical performance.
+\subsection*{Solution}
+Our solution to solve the above problem will consist of a shooting mechanism, a way to identify successful returns and a system to recommend different shots. The shooting mechanism must apply different speeds, spins and trajectories to the ball in order to cover the full scope of possible shots. Once a shot has been taken, the system must identify which returns are successful. After understanding the user's weak points, the system will begin to recommend particular shots to exploit the user's weak points. Throughout the training session, the system must provide the user with feedback on the quality of their game. \\\\
+To implement this solution, it will most likely consist of a electromechanical system to shoot the ball and a computer vision system to track the ball's location during flight. A server must also be added to store data, provide diagnostics and recommend shots given the user's past data.
+\section*{Project Justification}
+This project is perfect for a Software \& Mechatronics Capstone as it requires many of the skills we have developed over our academic lifetime. For example, significant engineering must be done to make the shooting mechanism reliable and satisfy all the degrees of freedom the ball can take. Computer vision must be used to track the ball, and it must do so reliably to provide valuable insight. Lastly, some reinforcement algorithms will be used to balance the needs of exploring different shots for a player and exploiting their weaknesses. Overall, it requires a good mix of software, mechanical and engineering skills.
+\end{document}  
