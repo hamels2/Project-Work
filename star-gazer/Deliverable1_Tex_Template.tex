@@ -1,0 +1,584 @@
+\documentclass[]{article}
+
+% Imported Packages
+%------------------------------------------------------------------------------
+\usepackage{amssymb}
+\usepackage{amstext}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+\usepackage[margin=1.5in]{geometry}
+\usepackage{graphicx}
+\usepackage{extarrows}
+\usepackage{setspace}
+\usepackage{color}
+\usepackage{hyperref}
+%------------------------------------------------------------------------------
+
+% Header and Footer
+%------------------------------------------------------------------------------
+\pagestyle{plain}  
+\renewcommand\headrulewidth{0.4pt}                                      
+\renewcommand\footrulewidth{0.4pt}                                    
+%------------------------------------------------------------------------------
+
+% Title Details
+%------------------------------------------------------------------------------
+\title{IdentiSky: SRS}
+\author{Group 2 for SFWR ENG 3A04 \\
+\\ 
+Alex Guerrero, guerreap, 1133763 \\
+Jabrayil Malikov, malikoj, 1302641 \\
+Matt Franceschini, francemj, 1310437 \\
+Sam Hamel, hamels2, 1321692 \\
+Vicky Bilbily, bilbilv, 1317465 \\
+}
+\date{February 8th, 2016}                               
+%------------------------------------------------------------------------------
+
+% Document
+%------------------------------------------------------------------------------
+\begin{document}
+
+\maketitle
+\newpage
+\tableofcontents
+\newpage
+
+%-----------------------------------------------------------------------------------------------------------------------------------------------
+%      					  ALEX'S SECTION  <( ^ _ ^ )>
+%-----------------------------------------------------------------------------------------------------------------------------------------------
+
+\section{Introduction}
+\label{sec:introduction}
+% Begin Section
+
+\subsection{Purpose}
+\label{sub:purpose}
+% Begin SubSection
+The purpose of this documents is to establish a basis for a agreement between the users and developers on what the application will do. It outlines the program's requirements, both functional and non-functional. This document provides a foundation for development and will be used for verification and validation. This document is to be used as a reference for the development team as well as the professor and teaching assistants of SFWR ENG 3A03. 
+% End SubSection
+
+\subsection{Scope}
+\label{sub:scope}
+% Begin SubSection
+IdentiSky is a mobile application that identifies objects in the night sky. These objects are limited to stars and their associated \textbf{constellations}, planets, planes, and noteable \textbf{satellites} such as the \textbf{ISS}. Search results are based on the user's current location, date, time, and weather in the local area, as well as the user's answers to questions queried by the application. The goal of IdentiSky is answer the question, "What is that?" when \textbf{sky gazing} or simply looking up at the sky. 
+% End SubSection
+
+\subsection{Definitions, Acronyms, and Abbreviations}
+\label{sub:definitions_acronyms_and_abbreviations}
+% Begin SubSection
+\begin{description}
+	\item[Constellation] - a group of stars forming a recognizable pattern that is traditionally named after its apparent form or identified with a mythological figure
+	\item[Satellite] - a celestial body orbiting or an artificial body placed in orbit around the earth
+	\item[ISS] - International Space Station
+	\item[Sky Gazing] - gazing at the sky for pleasure or with an astronomical interest
+\end{description}
+% End SubSection
+
+\subsection{References}
+\label{sub:references}
+% Begin SubSection
+\begin{itemize}
+	\item Grabianowski, Ed. "The Ten Most Important Satellites Orbiting Earth Now". Internet: \url{http://io9.gizmodo.com/391538/the-ten-most-important-satellites-orbiting-earth-now}, May 19, 2008 [Feb. 4, 2016].
+\end{itemize}
+% End SubSection
+
+\subsection{Overview}
+\label{sub:overview}
+% Begin SubSection
+The rest of the document is organized as follows: 2 - overall description of the software, 3 - functional requirements, 4 - non-functional requirements , and lastly 5 - division of labour.
+% End SubSection
+
+% End Section
+%-----------------------------------------------------------------------------------------------------------------------------------------------
+%      					   END ALEX'S SECTION  <( ^ _ ^ )>
+%-----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+\section{Overall Description}
+\label{sec:overall_description}
+% Begin Section
+
+\subsection{Product Perspective}
+\label{sub:product_perspective}
+% Begin SubSection
+IdentiSky is a standalone android application, and therefore is completely self-contained and is in no way part of a larger system. 
+% End SubSection
+
+\subsection{Product Functions}
+\label{sub:product_functions}
+% Begin SubSection
+IdentiSky's purpose is to identify objects that are currently in the sky in the user'€™s relative vicinity, it accomplishes this through two main functions: 
+\begin{enumerate}
+\item The application will track and process information about the user, such as finding the user's location, the direction they are currently facing, altitude, and current weather in their location in order to accurately identify objects in the sky that they are potentially looking at.
+
+\item The application will identify objects by taking user inputs and also querying the user with questions based on the possible object they wish to identify.
+
+
+\item \textcolor{red}{The Application is able to notify the user when they are in a place where they can see notable objects in the sky. The app can also tell the user if optimal \textbf{sky gazing} areas are nearby}
+\end{enumerate}
+
+The application will be able to identify the following:
+
+* Planets
+
+* Notable stars
+
+* \textbf{Constellations}
+
+* Notable \textbf{satellites}
+
+* Airplanes 
+% End SubSection
+
+\subsection{User Characteristics}
+\label{sub:user_characteristics}
+% Begin SubSection
+The general users of the application are going to be people of any age above six that have the ability to see. The users will need little to no background in astronomy, however, most likely, a majority of the users will be astronomy enthusiasts who have a more in depth knowledge of Space. 
+% End SubSection
+
+\subsection{Constraints}
+\label{sub:constraints}
+% Begin SubSection
+The application must be developed for Android, and it must interface with Google maps. There are non-adjustable time constraints for several deliverables and the overall project must be complete by the 8th of April. In addition, since the budget for this project is zero dollars, all technology must be free and/or open source material. 
+% End SubSection
+
+\subsection{Assumptions and Dependencies}
+\label{sub:assumptions_and_dependencies}
+% Begin SubSection
+There are three main factors that might change overtime such that it would require revising the SRS. The first of these factors is the likelihood that updates to the operating systems can affect the UI and implementation of the program such that changes will have to be made. Another factor is if Google changes aspects of their Maps API such as charging developers for it, or removing features, then the SRS must change since the use of the Google Maps API is one of the constraints of this
+
+project. The third possible factor is any laws that can change or appear that pertain to the tracking and processing of user information. Since the application takes part in these actions, any changes can become new constraints and/or requirements that must be added or removed. 
+% End SubSection
+
+\subsection{Apportioning of Requirements}
+\label{sub:apportioning_of_requirements}
+% Begin SubSection
+There are no plans to delay any of the requirements thus far, as a formal project timeline has not been prepared yet. 
+% End SubSection
+
+% End Section
+
+
+\section{Functional Requirements}
+\label{sec:functional_requirements}
+% Begin Section
+\begin{enumerate}[{VP}1.]
+	\item User
+	\begin{enumerate}[{BE1}.1]
+		\item User wants to open application
+		\begin{enumerate}
+			\item The system must provide a way to be initiated by the user from the main screen of their device.
+		\end{enumerate}
+		\item User wants to identify an object in the night sky.
+		\begin{enumerate}
+		    \item The system must provide an option to begin an object identification process.
+		    \item The system must be able to take in gesture-based user-input.
+			\item The system must be able to identify the user's location.
+			\item The system must be able to identify the weather at the user's current location.
+			\item The system must be able to identify the time and date at the user's location.
+			\item The system must allow the user to pick between two categories: single objects and constellations.
+			\item The system must include experts that are consulted to help to assess information and identify an object, which the system will swap in depending on the category selected by the user.
+			\item The system must provide multiple-choice questions for the user to answer, to gain more information about the object in question.
+			\item The system must have a database of objects to refer to and compare the user's information to.
+			\item The system must be able to score each possible object on how likely it is that they are the correct object.
+			\item The system must be able to list the 10 most likely objects according to their score.
+		\end{enumerate}
+		\item User wants more information about an identified object.
+		\begin{enumerate}
+		    \item The system must provide a way for the user to select one object from a list of identified objects.
+		    \item The system must display extra information about an object to the user when prompted.
+		\end{enumerate}
+		\item \textcolor{red}{User wants a better vantage point of the sky.}
+		\begin{enumerate}
+		    \item \textcolor{red}{The system must provide an option to request nearby \textbf{sky gazing} locations.}
+		    \item\textcolor{red}{ The system must list nearby \textbf{sky gazing} locations to the user, arranged by distance or altitude, according to the user's discretion.}
+		    \item \textcolor{red}{The system must provide a map-view of all nearby \textbf{sky gazing} locations.}
+		\end{enumerate}
+		\item User wants to modify the application settings.
+		\begin{enumerate}
+		    \item The system provides an option to navigate to a settings page.
+		    \item The system settings page allows the user to modify settings such as notifications, volume, and text size.
+		\end{enumerate}
+        \color{red}
+	    \item It is an excellent day for \textbf{sky gazing}, due to the weather and/or a particular phenomenon viewable at the user's location.
+	    \begin{enumerate}
+	        \item The system must be able to send the user a notification informing them of the clear weather or phenomenon, if the user has this notification enabled.
+	        \item The system must include a notification-centre type screen, accessible from the main menu, in which recent notifications are listed.
+	    \end{enumerate}
+	\end{enumerate}
+	\item Developer
+	\begin{enumerate}[{BE2}.1]
+		\item User reports a bug.
+		\begin{enumerate}
+			\item The system must have a "developer mode" for assessing performance and bugs.
+		\end{enumerate}
+		\item A new identifiable object has been discovered/created.
+		\begin{enumerate}
+			\item The system must allow for updates to be made to the database.
+		\end{enumerate}
+		\item Someone tries to compromise the integrity of the application and developer by intercepting messages between the experts and the forum.
+		\begin{enumerate}
+		    \item The system must encrypt all messages between the experts and the forum.
+		\end{enumerate}
+		\item A new expert has been developed to be used in IdentiSky
+		\begin{enumerate}
+			\item The system must be created so that it is possible for the developer to swap in and out experts with ease.
+		\end {enumerate}
+	\end{enumerate}
+
+% End Section
+
+\section{Non-Functional Requirements}
+\label{sec:non-functional_requirements}
+% Begin Section
+\subsection{Look and Feel Requirements}
+\label{sub:look_and_feel_requirements}
+% Begin SubSection
+
+\subsubsection{Appearance Requirements}
+\label{ssub:appearance_requirements}
+% Begin SubSubSection
+\begin{enumerate}[{LF}1. ]
+	\item The system shall have a simple interface.
+\end{enumerate}
+% End SubSubSection
+
+\subsubsection{Style Requirements}
+\label{ssub:style_requirements}
+% Begin SubSubSection
+\begin{enumerate}[{LF}1. ]
+	\item The app will be styled in a modern way, in order to attract all audiences.
+\end{enumerate}
+% End SubSubSection
+
+% End SubSection
+
+\subsection{Usability and Humanity Requirements}
+\label{sub:usability_and_humanity_requirements}
+% Begin SubSection
+
+\subsubsection{Ease of Use Requirements}
+\label{ssub:ease_of_use_requirements}
+% Begin SubSubSection
+\begin{enumerate}[{UH}1. ]
+	\item The system should be usable by anyone from the age of 7 years old to 80 years old.
+	\item The system shall be used by people with no previous training.
+\end{enumerate}
+% End SubSubSection
+
+\subsubsection{Personalization and Internationalization Requirements}
+\label{ssub:personalization_and_internationalization_requirements}
+% Begin SubSubSection
+\begin{enumerate}[{UH}1. ]
+	\item The app should not include any idioms which are not transferable between languages.
+\end{enumerate}
+% End SubSubSection
+
+\subsubsection{Learning Requirements}
+\label{ssub:learning_requirements}
+% Begin SubSubSection
+\begin{enumerate}[{UH}1. ]
+	\item The product shall be able to be used by members of the public who will receive no training before using it.
+\end{enumerate}
+% End SubSubSection
+
+\subsubsection{Understandability and Politeness Requirements}
+\label{ssub:understandability_and_politeness_requirements}
+% Begin SubSubSection
+\begin{enumerate}[{UH}1. ]
+	\item The product shall use symbols and words that are naturally understandable by the user community.
+    \item The product shall hide the details of its construction from the user.
+\end{enumerate}
+% End SubSubSection
+
+\subsubsection{Accessibility Requirements}
+\label{ssub:accessibility_requirements}
+% Begin SubSubSection
+\begin{enumerate}[{UH}1. ]
+	\item N/A
+\end{enumerate}
+% End SubSubSection
+
+% End SubSection
+
+\subsection{Performance Requirements}
+\label{sub:performance_requirements}
+% Begin SubSection
+
+\subsubsection{Speed and Latency Requirements}
+\label{ssub:speed_and_latency_requirements}
+% Begin SubSubSection
+\begin{enumerate}[{PR}1. ]
+	\item The app must be as quick as possible.
+	\item The app must not have very many load screens.
+	\item The system must load all data in 5-10 seconds.
+\end{enumerate}
+% End SubSubSection
+
+\subsubsection{Safety-Critical Requirements}
+\label{ssub:safety_critical_requirements}
+% Begin SubSubSection
+\begin{enumerate}[{PR}1. ]
+	\item N/A
+\end{enumerate}
+% End SubSubSection
+
+\subsubsection{Precision or Accuracy Requirements}
+\label{ssub:precision_or_accuracy_requirements}
+% Begin SubSubSection
+\begin{enumerate}[{PR}1. ]
+	\item The system must be accurate enough to identify an item in the night sky.
+\end{enumerate}
+% End SubSubSection
+
+\subsubsection{Reliability and Availability Requirements}
+\label{ssub:reliability_and_availability_requirements}
+% Begin SubSubSection
+\begin{enumerate}[{PR}1. ]
+	\item The system must be offline as little as possible as it is always night somewhere.
+\end{enumerate}
+% End SubSubSection
+
+\subsubsection{Robustness or Fault-Tolerance Requirements}
+\label{ssub:robustness_or_fault_tolerance_requirements}
+% Begin SubSubSection
+\begin{enumerate}[{PR}1. ]
+	\item The system must be robust enough to withstand 100s of users accessing the data at any one time.
+\end{enumerate}
+% End SubSubSection
+
+\subsubsection{Capacity Requirements}
+\label{ssub:capacity_requirements}
+% Begin SubSubSection
+\begin{enumerate}[{PR}1. ]
+	\item N/A
+\end{enumerate}
+% End SubSubSection
+
+\subsubsection{Scalability or Extensibility Requirements}
+\label{ssub:scalability_or_extensibility_requirements}
+% Begin SubSubSection
+\begin{enumerate}[{PR}1. ]
+	\item N/A
+\end{enumerate}
+% End SubSubSection
+
+\subsubsection{Longevity Requirements}
+\label{ssub:longevity_requirements}
+% Begin SubSubSection
+\begin{enumerate}[{PR}1. ]
+	\item N/A
+\end{enumerate}
+% End SubSubSection
+
+% End SubSection
+
+\subsection{Operational and Environmental Requirements}
+\label{sub:operational_and_environmental_requirements}
+% Begin SubSection
+
+\subsubsection{Expected Physical Environment}
+\label{ssub:expected_physical_environment}
+% Begin SubSubSection
+\begin{enumerate}[{OE}1. ]
+	\item Outside on a clear day with connection to the internet.
+\end{enumerate}
+% End SubSubSection
+
+\subsubsection{Requirements for Interfacing with Adjacent Systems}
+\label{ssub:requirements_for_interfacing_with_adjacent_systems}
+% Begin SubSubSection
+\begin{enumerate}[{OE}1. ]
+	\item N/A.
+\end{enumerate}
+% End SubSubSection
+
+\subsubsection{Productization Requirements}
+\label{ssub:productization_requirements}
+% Begin SubSubSection
+\begin{enumerate}[{OE}1. ]
+	\item N/A.
+\end{enumerate}
+% End SubSubSection
+
+\subsubsection{Release Requirements}
+\label{ssub:release_requirements}
+% Begin SubSubSection
+\begin{enumerate}[{OE}1. ]
+	\item The system shall be released on the Google Play Store.
+\end{enumerate}
+% End SubSubSection
+
+% End SubSection
+
+\subsection{Maintainability and Support Requirements}
+\label{sub:maintainability_and_support_requirements}
+% Begin SubSection
+
+\subsubsection{Maintenance Requirements}
+\label{ssub:maintenance_requirements}
+% Begin SubSubSection
+\begin{enumerate}[{MS}1. ]
+	\item Shall be updated monthly via Google Play store.
+\end{enumerate}
+% End SubSubSection
+
+\subsubsection{Supportability Requirements}
+\label{ssub:supportability_requirements}
+% Begin SubSubSection
+\begin{enumerate}[{MS}1. ]
+	\item Support shall be provided via comments on the Google Play store.
+\end{enumerate}
+% End SubSubSection
+
+\subsubsection{Adaptability Requirements}
+\label{ssub:adaptability_requirements}
+% Begin SubSubSection
+\begin{enumerate}[{MS}1. ]
+	\item Shall work on android phones only.
+	\item Shall work on phones with a screen resolution of 720x1280 and higher.
+\end{enumerate}
+% End SubSubSection
+
+% End SubSection
+
+\subsection{Security Requirements}
+\label{sub:security_requirements}
+% Begin SubSection
+
+\subsubsection{Access Requirements}
+\label{ssub:access_requirements}
+% Begin SubSubSection
+\begin{enumerate}[{SR}1. ]
+	\item Anyone with an Android phone shall be able to use this app.
+	\item Users will not have accounts.
+\end{enumerate}
+% End SubSubSection
+
+\subsubsection{Integrity Requirements}
+\label{ssub:integrity_requirements}
+% Begin SubSubSection
+\begin{enumerate}[{SR}1. ]
+	\item There shall be encription within the app between the experts and the blackboard.
+\end{enumerate}
+% End SubSubSection
+
+\subsubsection{Privacy Requirements}
+\label{ssub:privacy_requirements}
+% Begin SubSubSection
+\begin{enumerate}[{SR}1. ]
+	\item No personal information shall be required.
+\end{enumerate}
+% End SubSubSection
+
+\subsubsection{Audit Requirements}
+\label{ssub:audit_requirements}
+% Begin SubSubSection
+\begin{enumerate}[{SR}1. ]
+	\item N/A.
+\end{enumerate}
+% End SubSubSection
+
+\subsubsection{Immunity Requirements}
+\label{ssub:immunity_requirements}
+% Begin SubSubSection
+\begin{enumerate}[{SR}1. ]
+	\item N/A.
+\end{enumerate}
+% End SubSubSection
+
+% End SubSection
+
+\subsection{Cultural and Political Requirements}
+\label{sub:cultural_and_political_requirements}
+% Begin SubSection
+
+\subsubsection{Cultural Requirements}
+\label{ssub:cultural_requirements}
+% Begin SubSubSection
+\begin{enumerate}[{CP}1. ]
+	\item The app will not mention any specific culture so as to avoid offense.
+	\item The app shall only make reference to any country in reference to ownership of satellites.
+\end{enumerate}
+% End SubSubSection
+
+\subsubsection{Political Requirements}
+\label{ssub:political_requirements}
+% Begin SubSubSection
+\begin{enumerate}[{CP}1. ]
+	\item N/A
+\end{enumerate}
+% End SubSubSection
+
+% End SubSection
+
+\subsection{Legal Requirements}
+\label{sub:legal_requirements}
+% Begin SubSection
+
+\subsubsection{Compliance Requirements}
+\label{ssub:compliance_requirements}
+% Begin SubSubSection
+\begin{enumerate}[{LR}1. ]
+	\item The app shall adhere to Compliance laws of Canada, Ontario.
+\end{enumerate}
+% End SubSubSection
+
+\subsubsection{Standards Requirements}
+\label{ssub:standards_requirements}
+% Begin SubSubSection
+\begin{enumerate}[{LR}1. ]
+	\item The app shall adhere to Standards laws of Canada, Ontario.
+\end{enumerate}
+% End SubSubSection
+
+% End SubSection
+
+% End Section
+
+\section{Division of Labour}
+\label{sec:division_of_labour}
+% Begin Section
+Section 1: Alex \\
+Section 2: Sam \\
+Section 3: Vicky \\
+Section 4 (subsections 4.1-4.4): Matt \\
+Section 4 (subsections 4.5-4.7): Jabrayil \\
+
+\noindent Signatures:
+% End Section
+
+\newpage
+\section*{Modifications}
+
+\subsection*{Section 1}
+
+Modified references to use proper citation formatting.
+
+
+\subsection*{Section 2}
+%start
+N/A
+%end
+
+\subsection*{Section 3}
+\begin{itemize}
+\item Removed \emph{System} viewpoint, redistrubuted the business events within it.
+\item Added BE1.2 v and vi, and BE2.4, about the swapping of experts.
+\item Added business event BE2.3 about encryption, and an associated requirement.
+\end{itemize}
+
+\subsection*{Section 4}
+%matt start
+
+%matt end
+%jabrayil start
+Some changes made to sections 4.5-4.7.
+%jabrayil end
+
+
+\end{document}
+%------------------------------------------------------------------------------

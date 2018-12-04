@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">IdentiSky</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_gazing_locations">Map</string>
+    <string name="title_activity_identisky">IdentiSky</string>
+    <string name="title_activity_results">Results</string>
+</resources>

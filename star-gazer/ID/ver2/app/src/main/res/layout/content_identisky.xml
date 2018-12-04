@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="group2.identisky.Identisky"
+    tools:showIn="@layout/activity_identisky">
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Constellation"
+        android:id="@+id/Constellation"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:onClick="Run"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Moving Object"
+        android:id="@+id/Moving"
+        android:layout_below="@+id/Constellation"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:onClick="Run"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stationairy Object"
+        android:id="@+id/Stationairy"
+        android:onClick="Run"
+        android:layout_below="@+id/Moving"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Barely"
+        android:id="@+id/barely"
+        android:layout_below="@+id/Medium"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:visibility="invisible"
+        android:onClick="Run"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Medium"
+        android:id="@+id/Medium"
+        android:layout_below="@+id/Fast"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:visibility="invisible"
+        android:onClick="Run"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fast"
+        android:id="@+id/Fast"
+        android:onClick="Run"
+        android:layout_below="@+id/Moving"
+        android:visibility="invisible"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0-3"
+        android:id="@+id/ZeroToThree"
+        android:layout_marginLeft="110dp"
+        android:layout_marginTop="70dp"
+        android:visibility="invisible"
+        android:onClick="Run"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4-8"
+        android:id="@+id/FourToEight"
+        android:visibility="invisible"
+        android:onClick="Run"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="110dp"
+        android:layout_alignTop="@+id/ZeroToThree"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="8-12"
+        android:id="@+id/EightToTwelve"
+        android:visibility="invisible"
+        android:onClick="Run"
+        android:layout_marginLeft="110dp"
+        android:layout_below="@+id/FourToEight"
+        android:layout_marginTop="40dp" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12+"
+        android:layout_marginLeft="110dp"
+        android:id="@+id/TwelvePlus"
+        android:visibility="invisible"
+        android:onClick="Run"
+        android:layout_below="@+id/EightToTwelve"
+        android:layout_marginTop="40dp" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Okay"
+        android:layout_marginLeft="110dp"
+        android:id="@+id/Next"
+        android:visibility="invisible"
+        android:onClick="Run"
+        android:layout_below="@+id/EightToTwelve"
+        android:layout_marginTop="150dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set Date"
+        android:layout_marginLeft="120dp"
+        android:id="@+id/Date"
+        android:visibility="invisible"
+        android:onClick="showDatePickerDialog"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="70dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set Time"
+        android:layout_marginLeft="120dp"
+        android:id="@+id/Time"
+        android:visibility="invisible"
+        android:onClick="showTimePickerDialog"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="70dp" />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Done"
+        android:layout_marginLeft="120dp"
+        android:id="@+id/Done"
+        android:visibility="invisible"
+        android:onClick="Run"
+        android:layout_below="@+id/Date"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Done"
+        android:layout_marginLeft="120dp"
+        android:id="@+id/Done1"
+        android:visibility="invisible"
+        android:onClick="Run"
+        android:layout_below="@+id/Time"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Yes"
+        android:layout_marginLeft="120dp"
+        android:id="@+id/Yes"
+        android:visibility="invisible"
+        android:onClick="Run"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="50dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No"
+        android:layout_marginLeft="120dp"
+        android:id="@+id/No"
+        android:visibility="invisible"
+        android:onClick="Run"
+        android:layout_below="@+id/Yes"
+        android:layout_marginTop="40dp" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Yes"
+        android:layout_marginLeft="120dp"
+        android:id="@+id/Yes1"
+        android:visibility="invisible"
+        android:onClick="Run"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="50dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No"
+        android:layout_marginLeft="120dp"
+        android:id="@+id/No1"
+        android:visibility="invisible"
+        android:onClick="Run"
+        android:layout_below="@+id/Yes"
+        android:layout_marginTop="40dp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Is it a..."
+        android:id="@+id/textView"
+        android:layout_marginTop="28dp"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner"
+        android:layout_alignBottom="@+id/TwelvePlus"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+         />
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/imageButton"
+        android:src="@drawable/f"
+        android:scaleType="fitXY"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="120dp"
+        android:layout_alignTop="@+id/textView"
+        android:scaleX="1"
+        android:scaleY="1"
+        android:onClick="Run"
+        android:visibility="invisible"
+        />
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/imageButton1"
+        android:src="@drawable/h"
+        android:scaleType="fitXY"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="140dp"
+        android:layout_alignTop="@+id/textView"
+        android:scaleX="1"
+        android:scaleY="1"
+        android:onClick="Run"
+        android:visibility="invisible"/>
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/imageButton2"
+        android:src="@drawable/t"
+        android:scaleType="fitXY"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="240dp"
+        android:layout_alignTop="@+id/textView"
+        android:scaleX="1"
+        android:scaleY="1"
+        android:onClick="Run"
+        android:visibility="invisible"/>
+
+
+
+</RelativeLayout>

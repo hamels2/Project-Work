@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">FindGazingLocations</string>
+    <string name="title_activity_gazing_locations">Gazing Locations</string>
+</resources>
