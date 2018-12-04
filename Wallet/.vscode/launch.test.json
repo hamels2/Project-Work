@@ -1,0 +1,30 @@
+{
+    "run": {
+        "default": "",
+        "items": [
+            {
+                "name": "Wallet",
+                "projectName": "Wallet",
+                "workingDirectory": "c:\\Users\\sam2h\\Desktop\\upgrade\\Wallet",
+                "args": [],
+                "vmargs": [],
+                "env": {},
+                "preLaunchTask": ""
+            }
+        ]
+    },
+    "debug": {
+        "default": "",
+        "items": [
+            {
+                "name": "Wallet",
+                "projectName": "Wallet",
+                "workingDirectory": "c:\\Users\\sam2h\\Desktop\\upgrade\\Wallet",
+                "args": [],
+                "vmargs": [],
+                "env": {},
+                "preLaunchTask": ""
+            }
+        ]
+    }
+}
