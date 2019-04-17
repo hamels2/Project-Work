@@ -1,10 +1,12 @@
 Run instructions:
 This program was designed to run on Windows
+This jar was built using maven, to rebuild run mvn package.
+On successful build:
 cd LM/LM/Target
 java -jar LM-1.0-SNAPHOT.jar
 (Program takes a little while to start up)
 
-This jar was built using maven, to rebuild run mvn package
+
 
 User instructions:
 Once program is in view press the monitor button on any row
